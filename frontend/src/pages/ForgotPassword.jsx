@@ -10,7 +10,7 @@ export default function ForgotPassword() {
     setLoading(true); // start loader
 
     try {
-      const response = await fetch(`${import.meta.env.BACKEND_URL}/api/auth/forgot-password`, {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/auth/forgot-password`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),

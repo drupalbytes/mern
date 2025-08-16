@@ -13,7 +13,7 @@ export default function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`${import.meta.env.BACKEND_URL}/api/auth/signup`, {
+      await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/auth/signup`, {
         name,
         email,
         password,

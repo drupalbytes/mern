@@ -19,7 +19,7 @@ export default function AddMenuItem() {
       const formData = new FormData();
       formData.append("image", image);
 
-      const uploadRes = await axios.post(`${import.meta.env.BACKEND_URL}/api/upload`, formData);
+      const uploadRes = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/upload`, formData);
       const imageUrl = uploadRes.data.url;
 
       const menuData = {
@@ -34,7 +34,7 @@ export default function AddMenuItem() {
         },
       };
 
-      await axios.post(`${import.meta.env.BACKEND_URL}/api/menu`, menuData, {
+      await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/menu`, menuData, {
         headers: {
           Authorization: `Bearer YOUR_ADMIN_TOKEN`, // if using auth
         },
