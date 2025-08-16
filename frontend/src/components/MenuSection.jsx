@@ -9,7 +9,7 @@ export default function MenuSection() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/menu")
+      .get(`${import.meta.env.BACKEND_URL}/api/menu`)
       .then((res) => setMenus(res.data))
       .catch((err) => console.error(err));
   }, []);
