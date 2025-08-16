@@ -1,0 +1,24 @@
+/*navbar**/
+div#navbarNav ul{
+  gap: 35px;
+}
+div#navbarNav ul li a {
+    font-weight: 600;
+    border-bottom: 2px solid var(--white) !important;
+}
+div#navbarNav ul li a.active,
+div#navbarNav ul li a:hover{
+  color: var(--indigo) !important;
+  border-bottom: 2px solid var(--indigo) !important;  
+}
+div#navbarNav ul li:last-child a,
+div#navbarNav ul li:last-child a.active,
+div#navbarNav ul li:last-child a:hover{
+  border-bottom: none !important;
+  color: var(--white) !important;
+}
+
+/*hero*/
+.skew-bg {
+    transform: skewX(-12deg);
+}
