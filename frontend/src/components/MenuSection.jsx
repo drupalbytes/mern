@@ -22,17 +22,7 @@ export default function MenuSection() {
     <section className="container py-5">
       {/* Title */}
       <div className="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4">
-        <h2 className="fw-bold text-dark mb-3 mb-md-0">
-          Checkout our{" "}
-          <span
-            className="px-3 py-1 bg-primary text-white fw-bold d-inline-block"
-            style={{ transform: "skewX(-12deg)", display: "inline-block" }}
-          >
-            <span style={{ transform: "skewX(12deg)", display: "inline-block" }}>
-              menu.
-            </span>
-          </span>
-        </h2>
+        <h1>Checkout our <span class="text-white bg-primary px-2 d-inline-block mt-2 skew-bg">Menu.</span></h1>
 
         {/* Category Tabs */}
         <div className="btn-group">

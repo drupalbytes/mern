@@ -8,15 +8,18 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
+      setLoading(true);
       const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/auth/login`, {
         email,
         password,
       });
+      setLoading(false);
 
       const token = res.data.token;
       const role = res.data.role;
@@ -86,8 +89,8 @@ export default function Login() {
               </div>
             </div>
 
-            <button type="submit" className="btn btn-primary w-100 mb-3">
-              Login
+            <button type="submit" className="btn btn-primary w-100 mb-3" disabled={loading}>
+              {loading ? "Logging in..." : "Login"}
             </button>
 
             {/* Links */}

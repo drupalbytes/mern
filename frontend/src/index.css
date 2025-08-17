@@ -22,3 +22,15 @@ div#navbarNav ul li:last-child a:hover{
 .skew-bg {
     transform: skewX(-12deg);
 }
+.amazing-services .img-fluid  {
+    background: #f7fafc;
+    border-radius: 50%;
+    padding: 15px;
+}
+.testimonial .img-fluid {
+    max-width: 75px;
+    border-radius: 50%;
+}
+.testimonial blockquote{
+  line-height: 1.7;
+}
