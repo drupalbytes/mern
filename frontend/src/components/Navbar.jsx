@@ -2,7 +2,7 @@ import React from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, NavLink } from "react-router-dom";
 import logoImg from "../assets/restaurant-logo.png";
 
 export default function Navbar() {
@@ -53,16 +53,16 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto align-items-center">
             <li className="nav-item">
-              <Link className="nav-link" to="/">About</Link>
+             <NavLink  to="/about" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>About</NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/blog">Blog</Link>
+              <NavLink  to="/blog" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>Blog</NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/pricing">Pricing</Link>
+              <NavLink  to="/pricing" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>Pricing</NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/contact">Contact Us</Link>
+              <NavLink  to="/contact" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>Contact Us</NavLink>
             </li>
 
             {token && (role === "admin" || role === "user") ? (

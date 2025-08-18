@@ -8,41 +8,37 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+          const handleSubmit = async (e) => {
+            e.preventDefault();
 
-    try {
-      setLoading(true);
-      const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/auth/login`, {
-        email,
-        password,
-      });
-      setLoading(false);
+            try {
+              const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/auth/login`, {
+                email,
+                password,
+              });
 
-      const token = res.data.token;
-      const role = res.data.role;
+              const token = res.data.token;
+              const role = res.data.role;
 
-      localStorage.setItem("token", token);
-      localStorage.setItem("role", role); // store role if needed later
+              localStorage.setItem("token", token);
+              localStorage.setItem("role", role);
 
-      // ✅ Show success toast
-      toast.success(res.data.msg || "Login successful");
+              toast.success(res.data.msg || "Login successful");
 
-      // ✅ Redirect based on role
-      setTimeout(() => {
-        if (role === "admin") {
-          navigate("/admin");
-        } else {
-          navigate("/");
-        }
-      }, 1000);
-    } catch (err) {
-      const msg = err.response?.data?.msg || "Something went wrong.";
-      toast.error(msg); // ❌ Show error toast
-    }
-  };
+              setTimeout(() => {
+                if (role === "admin") {
+                  navigate("/admin");
+                } else {
+                  navigate("/");
+                }
+              }, 1000);
+            } catch (err) {
+              const msg = err.response?.data?.msg || "Something went wrong.";
+              toast.error(msg);
+            }
+          };
+
 
   return (
     <div className="container-fluid login-page bg-dark text-light">
@@ -89,9 +85,9 @@ export default function Login() {
               </div>
             </div>
 
-            <button type="submit" className="btn btn-primary w-100 mb-3" disabled={loading}>
-              {loading ? "Logging in..." : "Login"}
-            </button>
+              <button type="submit" className="btn btn-primary w-100 mb-3">
+                Login
+              </button>
 
             {/* Links */}
             <div className="text-center">
