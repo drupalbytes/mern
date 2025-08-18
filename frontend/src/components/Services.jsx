@@ -17,7 +17,7 @@ export default function Services() {
   }, []);
 
   return (
-    <section className="py-5 text-center amazing-services" data-aos="fade-left">
+    <section className="py-5 text-center amazing-services" data-aos="fade-right">
       <div className="container">
         {/* Heading */}
 

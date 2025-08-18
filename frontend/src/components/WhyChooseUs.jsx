@@ -13,11 +13,11 @@ export default function WhyChooseUs() {
         once: true,     // whether animation should happen only once
       });
     }, []);
-    
+
   return (
     <>
       {/* ========== Hero Section 2: Image Left ========== */}
-      <section className="container py-5" data-aos="fade-right">
+      <section className="container py-5" data-aos="fade-left">
         <div className="row align-items-center flex-lg-row">
 
           {/* Text */}

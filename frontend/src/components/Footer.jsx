@@ -14,7 +14,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="bg-light text-dark pt-5 pb-3" data-aos="fade-left">
+    <footer className="bg-light text-dark pt-5 pb-3" data-aos="fade-right">
       <div className="container footer-content">
         <div className="row">
 

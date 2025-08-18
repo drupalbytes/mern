@@ -17,7 +17,7 @@ export default function Testimonials() {
 }, []);
 
   return (
-    <section className="py-5 text-center testimonial" data-aos="fade-left">
+    <section className="py-5 text-center testimonial" data-aos="fade-right">
       <div className="container ">
         {/* Heading */}
 

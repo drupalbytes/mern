@@ -15,7 +15,7 @@ export default function AppDownload() {
 }, []);
 
   return (
-    <section className="py-5 bg-dark text-white" data-aos="fade-right">
+    <section className="py-5 bg-dark text-white" data-aos="fade-left">
       <div className="container">
         <div className="row align-items-center">
           
