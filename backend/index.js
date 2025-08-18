@@ -4,8 +4,6 @@ import cors from "cors";
 import path from "path";
 import connectDB from "./config/db.js";
 import authRoutes from "./routes/authRoutes.js";
-import menuRoutes from "./routes/menuRoutes.js";
-import uploadRoutes from "./routes/uploadRoutes.js"; // import upload routes
 
 // Load environment variables
 dotenv.config();
@@ -22,9 +20,6 @@ app.get("/", (req, res) => {
   res.send("API is running...");
 })
 app.use("/api/auth", authRoutes);
-app.use("/api/menu", menuRoutes);
-app.use("/api/upload", uploadRoutes); // add upload routes
-app.use("/uploads", express.static("uploads")); // serve images
 
 // Connect to MongoDB
 connectDB();

@@ -8,7 +8,7 @@ import ResetPassword from "./pages/ResetPassword";
 import './App.css';
 
 import AdminLayout from "./components/AdminLayout";
-import AddMenuItem from "./components/AddMenuItem";
+
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
 
         {/* Admin Nested Routes */}
         <Route path="/admin" element={<AdminLayout />}>
-          <Route path="add-menu-item" element={<AddMenuItem />} />
+        
         </Route>
       </Routes>
     </Router>

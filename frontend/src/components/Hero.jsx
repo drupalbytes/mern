@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import heroImg from "../assets/delicious-food.png";
+import heroImg1 from "../assets/delicious-food.png";
+import heroImg2 from "../assets/latest-offer.png";
+
 
 export default function Hero() {
   return (
@@ -33,7 +35,7 @@ export default function Hero() {
           {/* Image */}
           <div className="hero-image col-lg-6 text-center">
             <img
-              src={heroImg}
+              src={heroImg1}
               alt="Delicious Food"
               className="img-fluid rounded-5"
             />
@@ -47,7 +49,7 @@ export default function Hero() {
           {/* Image */}
           <div className="hero-image col-lg-6 text-center mt-4 mt-lg-0">
             <img
-              src={heroImg}
+              src={heroImg2}
               alt="Delicious Food"
               className="img-fluid rounded-5"
             />
