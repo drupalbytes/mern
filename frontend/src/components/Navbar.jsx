@@ -1,4 +1,7 @@
 import React from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logoImg from "../assets/restaurant-logo.png";
 
@@ -7,6 +10,13 @@ export default function Navbar() {
   const token = localStorage.getItem("token");
   const role = localStorage.getItem("role");
 
+    useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration (1s)
+      once: true,     // whether animation should happen only once
+    });
+  }, []);
+
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("role");
@@ -14,7 +24,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-white pt-4 pb-5">
+    <nav className="navbar navbar-expand-lg navbar-light bg-white pt-4 pb-5" data-aos="fade-right">
       <div className="container">
         {/* Logo */}
         <Link className="navbar-brand" to="/">

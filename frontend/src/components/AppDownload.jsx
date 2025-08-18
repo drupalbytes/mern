@@ -1,10 +1,21 @@
 
 import React from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 import MobileImg from "../assets/mobile.png";
 
 export default function AppDownload() {
+
+  useEffect(() => {
+  AOS.init({
+    duration: 1000, // animation duration (1s)
+    once: true,     // whether animation should happen only once
+  });
+}, []);
+
   return (
-    <section className="py-5 bg-dark text-white">
+    <section className="py-5 bg-dark text-white" data-aos="fade-right">
       <div className="container">
         <div className="row align-items-center">
           

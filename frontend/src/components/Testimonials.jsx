@@ -1,12 +1,23 @@
 
 import React from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 import TestImg1 from "../assets/test-1.png";
 import TestImg2 from "../assets/test-2.png";
 import TestImg3 from "../assets/test-3.png";
 
 export default function Testimonials() {
+
+  useEffect(() => {
+  AOS.init({
+    duration: 1000, // animation duration (1s)
+    once: true,     // whether animation should happen only once
+  });
+}, []);
+
   return (
-    <section className="py-5 text-center testimonial">
+    <section className="py-5 text-center testimonial" data-aos="fade-left">
       <div className="container ">
         {/* Heading */}
 

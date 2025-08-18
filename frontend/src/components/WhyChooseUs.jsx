@@ -1,12 +1,23 @@
 import React from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import heroImg from "../assets/why-choose-us.png";
 
 export default function WhyChooseUs() {
+
+      useEffect(() => {
+      AOS.init({
+        duration: 1000, // animation duration (1s)
+        once: true,     // whether animation should happen only once
+      });
+    }, []);
+    
   return (
     <>
       {/* ========== Hero Section 2: Image Left ========== */}
-      <section className="container py-5">
+      <section className="container py-5" data-aos="fade-right">
         <div className="row align-items-center flex-lg-row">
 
           {/* Text */}

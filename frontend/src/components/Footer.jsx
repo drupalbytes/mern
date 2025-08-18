@@ -1,9 +1,20 @@
-// frontend/src/components/Footer.jsx
+
 import React from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function Footer() {
+
+    useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration (1s)
+      once: true,     // whether animation should happen only once
+    });
+  }, []);
+
   return (
-    <footer className="bg-light text-dark pt-5 pb-3">
+    <footer className="bg-light text-dark pt-5 pb-3" data-aos="fade-left">
       <div className="container footer-content">
         <div className="row">
 

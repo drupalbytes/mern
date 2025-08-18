@@ -1,13 +1,24 @@
 
 import React from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 import SerImg1 from "../assets/store.png";
 import SerImg2 from "../assets/cooking.png";
 import SerImg3 from "../assets/confetti.png";
 
 export default function Services() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration (1s)
+      once: true,     // whether animation should happen only once
+    });
+  }, []);
+
   return (
-    <section className="py-5 text-center amazing-services">
-      <div className="container ">
+    <section className="py-5 text-center amazing-services" data-aos="fade-left">
+      <div className="container">
         {/* Heading */}
 
         <h1>Amazing <span class="text-white bg-primary px-2 d-inline-block mt-2 skew-bg">Services.</span></h1>
